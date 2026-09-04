@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IO Solver</title>
+
+    <link rel="stylesheet" href="Estilo.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span>IO</span>
+            <div>
+                <h1>IO Solver</h1>
+                <p>Investigación de Operaciones</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#modulos">Módulos</a>
+            <a href="#acerca">Acerca</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="Inicio" class="hero">
+            <div class="contenido-hero">
+                <span class="badge">
+                    Ingenieria En Sistemas Computacionales
+                </span>
+                <h2>Resuleve problemas de <strong>Investigación de Operaciones</strong></h2>
+                <p>Herramienta para analizar, resolver problemas mediante modelos matemáticos, técnicas y algoritmos. 
+                </p>
+                <button onclick="irAModulos()"> Comenzar</button>
+            </div>
+        </section>
+        <section id="modulos" class="modules">
+            <div class="seccion-titulo">
+                <span>Herramientas</span>
+                <h2>Modulos del sistema</h2>
+                <p>Seleciona el área que se desea trabajar</p>
+            </div>
+
+            <div class="modulo-grid">
+                <article class="modulo-card active">
+                    <div class="modulo-icon">
+                        📊
+                    </div>
+                    <h3>Programación Lineal</h3>
+                    <p>Formulación de modelos, métdo gráfico y método Simplex</p>
+                    <button onclick="abrirModulo('programacion-lineal')">
+                        Abrir módulo
+                    </button>
+                </article>
+                <article class="modulo-card">
+                    <div class="modulo-icon">
+                        🌐
+                    </div>
+                    <h3>Análisis de Redes</h3>
+                    <p>Transporte, asignación, ruta más corta y PERT-CPM</p>
+                    <button disabled> Próximamente</button>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>IO Solver © 2026</p>
+        <p>Investigacion de Operaciones</p>
+    </footer>
+</body>
