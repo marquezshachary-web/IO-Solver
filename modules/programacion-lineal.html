@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IO Solver</title>
+
+    <link rel="stylesheet" href="programacion-lineal.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span>IO</span>
+            <div>
+                <h1>IO Solver</h1>
+                <p>Programación Lineal</p>
+            </div>
+        </div>
+        <a href="../pagPrincipal.html" class="back">← Regresar</a>
+    </header>
+
+    <main>
+        <section class="page-tittle">
+            <span>PROGRAMACIÓN LINEAL</span>
+            <h2>Método Gráfico</h2>
+            <p>Inttruduce los datos del problema para obtener la solución óptima.</p>
+        </section>
+
+        <section class="solver">
+            <div class="panel">
+                <h3>1. Función objetivo</h3>
+                <div class="objetive">
+                    <select id="tipoObjetivo">
+                        <option value="max">Maximizar</option>
+                        <option value="min">Minimizar</option>
+                    </select>
+                    <span>Z=<</span>
+                    <input type="number" id="c1" value="40">
+                    <span>X₁ +</span>
+                    <input type="number" name="c2" id="30">
+                    <span>X₂</span>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-header">
+                    <h3>2. Restricciones</h3>
+                    <button onclick="agregarRestriccion()">+ Agregar</button>
+                </div>
+                <div id="restricciones">
+                    <div class="restriction">
+                        <input type="number" class="a1" value="2">
+                        <span>X₁ +</span>
+                        <input type="number" name="a2" id="1">
+                        <span>X₂</span>
+                        <select class="signo">
+                            <option value="<=">≤</option>
+                            <option value=">=">≥</option>
+                            <option value="=">=</option>
+                        </select>
+                        <input type="number" class="b" value="40">
+                        <button onclick="eliminarRestriccion(this)">×</button>
+                    </div>
+                    <div class="restriction">
+                        <input type="number" class="a1" value="1">
+                        <span>X₁ +</span>
+                        <input type="number" class="a2" value="2">
+                        <span>X₂</span>
+                        <select class="signo">
+                            <option value="<=">≤</option>
+                            <option value=">=">≥</option>
+                            <option value="=">=</option>
+                        </select>
+                        <input type="number" class="b" value="50">
+                        <button class="delete" onclick="eliminarRestriccion(this)">×</button>
+                    </div>
+                </div>
+            </div>
+            <button class="solve" onclick="resolverMetodoGrafico()">🧮 Resolver problema</button>
+            <div id="resultado" class="results">
+                <div class="empty">
+                    <div>📊</div>
+                    <h3>Esperando problema</h3>
+                    <p>Introduce los datos y preciona "Resolver problema"</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="metodo-grafico.js"></script>
+    
+</body>
+</html>
